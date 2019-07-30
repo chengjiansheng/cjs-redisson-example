@@ -1,0 +1,20 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: cjs-redisson-example
+  redis:
+    cluster:
+      nodes: 10.0.29.30:6379, 10.0.29.95:6379, 10.0.29.205:6379
+    lettuce:
+      pool:
+        min-idle: 0
+        max-idle: 8
+        max-active: 20
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/test
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+
